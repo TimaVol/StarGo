@@ -1,0 +1,57 @@
+@use "core" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: get($fonts, "primary");
+  font-weight: normal;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  padding: 40px 0;
+  background: get($colors, "gradient");
+}
+
+a {
+  display: block;
+  width: max-content;
+  text-decoration: none;
+  z-index: z(page-wrapper);
+  transition: 0.5s linear;
+  &:hover {
+    color: get($colors, "linkHover");
+  }
+}
+
+h3,
+h4,
+p,
+a {
+  @include adaptiv-font(25, 18);
+  color: get($colors, "font");
+
+  
+}
+
+.error {
+  color: get($colors, "red");
+} 
+

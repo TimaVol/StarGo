@@ -1,0 +1,39 @@
+@use "../core" as *;
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 260px;
+      width: 100%;
+    }
+
+    .text {
+      height: 260px;
+      max-width: 260px;
+      width: 100%;
+      margin-top: 10px;
+      margin-left: 20px;
+
+      @include mq("tablet-small") {
+        height: 200px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .bio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
